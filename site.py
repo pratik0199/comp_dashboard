@@ -7,7 +7,7 @@ import seaborn as sns
 st.header('Compressor Health Monitoring')
 #st.subheader('This is our website')
 
-excel_file = pd.ExcelFile(r'C:\Users\psonawane\Documents\GERC_A_PARA_GUI_rev4.xlsm')
+excel_file = pd.ExcelFile(r'https://github.com/pratik0199/comp_dashboard\GERC_A_PARA_GUI_rev4.xlsm')
 dict_stg = {'Stage 1': {'tab1': [7, 368, 'table1_df'], 'tab2': [372, 733, 'table2_df'], 'tab3': [745, 1106, 'table3_df'], 'tab4': [1110, 1471,'table4_df']},
             'Stage 2': {'tab1': [7, 368, 'table1_df'], 'tab2': [372, 733, 'table2_df'], 'tab3': [745, 1106, 'table3_df'], 'tab4': [1110, 1471,'table4_df']}
            }
@@ -135,7 +135,7 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
 # Load data from Excel file
-database_df = pd.read_excel(r'C:\Users\psonawane\Documents\GERC_A_PARA_GUI_rev4.xlsm', sheet_name='database')
+database_df = pd.read_excel(r'https://github.com/pratik0199/comp_dashboard\GERC_A_PARA_GUI_rev4.xlsm', sheet_name='database')
 #st.write(database_df[' Stg I Flow factor'].iloc[1:26]).head()
 
 # Function to update the plot data for Stage I
@@ -213,7 +213,7 @@ st.button(label='Value 3', key='part3')
 # Add buttons with values in specific locations on top of the image
 #for label, (x, y) in button_positions.items():
     #st.markdown(f'<button style="position:absolute;top:{y}px;left:{x}px;">{label}</button>', unsafe_allow_html=True)
-excel_file1 = pd.read_excel(r'C:\Users\psonawane\Documents\GERC_A_PARA_GUI_rev4.xlsm', sheet_name='cur_data')
+excel_file1 = pd.read_excel(r'https://github.com/pratik0199/comp_dashboard\GERC_A_PARA_GUI_rev4.xlsm', sheet_name='cur_data')
 # Check if any value in the "flow factor" column is greater than 1.04
 valve_leakage_s1 = any(excel_file1["Flow factor for stg 1"] > 1.04)
 valve_leakage_s2 = any(excel_file1["Flow factor for stg 2"] <0)
@@ -250,7 +250,7 @@ col1, col2 = st.columns([30, 105])
 # Load the Excel file once at the beginning of the app
 @st.cache_data(ttl=60)  # Cache with a timeout of 1 min
 def load_data():
-    return pd.read_excel(r'C:\Users\psonawane\Documents\GERC_A_PARA_GUI_rev4.xlsm', sheet_name='cur_data')
+    return pd.read_excel(r'https://github.com/pratik0199/comp_dashboard\GERC_A_PARA_GUI_rev4.xlsm', sheet_name='cur_data')
 
 # Main Streamlit app
 def main():
