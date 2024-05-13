@@ -7,7 +7,7 @@ import seaborn as sns
 st.header('Compressor Health Monitoring')
 #st.subheader('This is our website')
 
-excel_file = pd.read_excel(r'https://github.com/pratik0199/comp_dashboard/blob/main/GERC_A_PARA_GUI_rev4.xlsm')
+excel_file = pd.read_excel(r'https://github.com/pratik0199/comp_dashboard/blob/main/GERC_A_PARA_GUI_rev4.xlsm, engine="openpyxl"')
 dict_stg = {'Stage 1': {'tab1': [7, 368, 'table1_df'], 'tab2': [372, 733, 'table2_df'], 'tab3': [745, 1106, 'table3_df'], 'tab4': [1110, 1471,'table4_df']},
             'Stage 2': {'tab1': [7, 368, 'table1_df'], 'tab2': [372, 733, 'table2_df'], 'tab3': [745, 1106, 'table3_df'], 'tab4': [1110, 1471,'table4_df']}
            }
