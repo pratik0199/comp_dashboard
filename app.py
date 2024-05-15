@@ -8,8 +8,8 @@ from PIL import Image
 st.set_page_config(layout="wide")
 
 # Load client logo and company logo
-company_logo = Image.open(r'C:\Users\psonawane\Downloads\ingenero1.png')
-client_logo = Image.open(r'C:\Users\psonawane\Downloads\dresser rand.png')
+company_logo = Image.open(r'https://github.com/pratik0199/comp_dashboard/blob/main/ingenero1.png')
+client_logo = Image.open(r'https://github.com/pratik0199/comp_dashboard/blob/main/dresser rand.png')
 
 # Main Streamlit app
 
