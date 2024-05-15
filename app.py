@@ -23,7 +23,7 @@ with col1:
 
 # Display title in the middle column
 with col2:
-    st.markdown('<h1 style="text-align: center;">Compressor Health Monitoring</h1>', unsafe_allow_html=True)
+    st.markdown('<h1 style="text-align: center;">Compressor Monitoring</h1>', unsafe_allow_html=True)
 
 # Display company logo in the top right column
 with col3:
