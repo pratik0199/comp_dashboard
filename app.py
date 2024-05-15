@@ -8,8 +8,8 @@ from PIL import Image
 st.set_page_config(layout="wide")
 
 # Load client logo and company logo
-company_logo = Image.open(r'https://github.com/pratik0199/comp_dashboard/blob/main/ingenero1.png')
-client_logo = Image.open(r'https://github.com/pratik0199/comp_dashboard/blob/main/dresser rand.png')
+company_logo = Image.open('ingenero1.png')
+client_logo = Image.open('dresser rand.png')
 
 # Main Streamlit app
 
@@ -30,7 +30,7 @@ with col3:
     st.image(company_logo, use_column_width=True)
 
 #For stage 1/2 plot
-excel_file = pd.ExcelFile(r'C:\Users\psonawane\Documents\GERC_A_PARA_GUI_rev4.xlsm')
+excel_file = pd.ExcelFile('GERC_A_PARA_GUI_rev4.xlsm')
 dict_stg = {'Stage 1': {'tab1': [7, 368, 'table1_df'], 'tab2': [372, 733, 'table2_df'], 'tab3': [745, 1106, 'table3_df'], 'tab4': [1110, 1471,'table4_df']},
             'Stage 2': {'tab1': [7, 368, 'table1_df'], 'tab2': [372, 733, 'table2_df'], 'tab3': [745, 1106, 'table3_df'], 'tab4': [1110, 1471,'table4_df']}
            }
@@ -151,7 +151,7 @@ with c2_col1:
 # Load the Excel file once at the beginning of the app
     @st.cache_data(ttl=60)  # Cache with a timeout of 1 min
     def load_data():
-        return pd.read_excel(r'C:\Users\psonawane\Documents\GERC_A_PARA_GUI_rev4.xlsm', sheet_name='cur_data')
+        return pd.read_excel('GERC_A_PARA_GUI_rev4.xlsm', sheet_name='cur_data')
 
 # Main Streamlit app
     def main():
